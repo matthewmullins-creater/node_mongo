@@ -1,36 +1,3 @@
 # Node.js Express + MongoDB User API
 
-## Setup
-
-1. **Install dependencies:**
-   ```sh
-   npm install
-   ```
-
-2. **Configure MongoDB:**
-   - Set your MongoDB connection string in the `.env` file:
-     ```
-     MONGODB_URI=mongodb://localhost:27017/yourdbname
-     ```
-
-3. **Start the server:**
-   ```sh
-   node index.js
-   ```
-
-## API Usage
-
-### GET `/users/:id`
-- Returns user details in JSON if found and age > 21.
-- Returns 404 if not found or age <= 21.
-- Returns 400 if the id is invalid.
-
-#### Example Response
-```json
-{
-  "_id": "...",
-  "name": "John Doe",
-  "email": "johndoe@email.com",
-  "age": 30
-}
-``` 
+This project is to build a simple Node.js Express API that connects to MongoDB using Mongoose, with a clear separation of concerns between the server logic and the data model. The API validates incoming user IDs, queries the database for users over age 21, and handles errors gracefully to ensure reliable and predictable responses. This structure makes the code easy to maintain and extend for future features.
